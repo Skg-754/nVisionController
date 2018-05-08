@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+	<html>	
+		<head>
+			<meta charset="utf-8"/>
+			<meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width" />
+			<title>nVisionController</title>	
+			<link rel="shortcut icon" type="image/x-icon" href="" /> 
+			<link href="style/common.css" rel="stylesheet">
+			<link href="style/index.css" rel="stylesheet">
+			<link href="style/user.css" rel="stylesheet">
+			
+			
+		</head>
+		<body spellcheck="false">
+			<% include header %>
+			<section>
+			
+				<%
+					var userPanel = JSON.parse(panel);
+					var name =  userPanel['name'];
+			
+					var inputs = userPanel['inputs'];
+					var inputsNb = inputs.length;
+					
+					var outputs = userPanel['outputs'];
+					var outputsNb = outputs.length;
+				%>
+			
+				
+				<div name="<%=name%>" class="panel" id="panel">
+					<div class="iptCt">
+					<%
+						
+						for (var n=0; n<inputsNb; n++){
+					%>
+							<div class="panelBtn in" name="in" id="in<%=inputs[n]%>">
+								<div name="<%=inputs[n]%>">
+									<%=inputs[n]%>
+								</div>
+							</div>
+					<%
+						}
+					%>
+					</div>
+					<div class="optCt">
+					<%
+						for (var n=0; n<outputsNb; n++){
+					%>
+							<div class="panelBtn out" name="out" id="out<%=outputs[n]%>">
+								<div name="<%=outputs[n]%>">
+									<%=outputs[n]%>
+								</div>
+							</div>
+					<%
+						}
+					%>
+					</div>
+				</div>
+				
+			</section>
+			
+		</body>
+		
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="js/socketConnect.js"></script>
+		
+		<script src="js/panels.js"></script>
+		<script src="js/logout.js"></script>
+		
+	</html>

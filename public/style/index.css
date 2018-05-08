@@ -1,0 +1,78 @@
+﻿body{
+	background-color : rgb(20,20,20);
+	color : rgb(210,210,210);
+	font-family : Comfortaa;
+	padding : 0px;
+}
+
+
+
+
+
+/**
+	Style du panel de grille
+**/
+.matrix{
+	border-collapse : separate;
+	border-spacing : 3px;
+	margin-top : 150px;
+	display :inline-block;
+}
+.matrix tr:first-Child{
+	margin-top : 30px;
+}
+.matrix td{
+	margin : 20px;
+	border: 1px solid rgba(210,210,210,0);
+	background-color : rgb(210,210,210);
+}
+.matrix th{
+	padding : 5px;	
+	font-size : 15px;
+	font-weight : normal;
+}
+.matrix .hLabel{
+	text-align : left;
+	width : 30px;
+	height : 30px;
+	padding : 0px;
+	transform : rotate(-90deg);
+	vertical-align : middle;
+}
+.matrix .hLabel div{
+	position : absolute;
+	bottom : 0px;
+	left : 10px;
+	display : inline-block;
+	
+
+}
+.matrix .label{
+padding : 2px;
+	width : 150px;
+	text-align : left;	
+	margin : 0px;
+}
+.matrix .vLocked img{
+	max-height : 20px;
+}
+.matrix td{
+	width : 30px;
+	height : 30px;
+}
+
+.matrix .label{
+	 transition: background-color 1s, color 1s;
+	 
+}
+
+.matrix .mtxBtn{
+	cursor : pointer;
+}
+.matrix .mtxBtn:hover{
+	background-color : rgb(150,150,150);
+}
+.matrix .mtxBtn:active{
+	background-color : rgb(200,200,200);
+}
+

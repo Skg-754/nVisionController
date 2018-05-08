@@ -1,0 +1,4 @@
+- administration des panels
+- gestion automatique de l'url du serveur websocket dans les .js clients
+- administration des utilisateurs
+- vérifier synchro live des modifications de label

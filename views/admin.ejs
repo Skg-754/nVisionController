@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+	<html>	
+		<head>
+			<meta charset="utf-8"/>
+			<meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width" />
+			<title>nVisionController</title>	
+			<link rel="shortcut icon" type="image/x-icon" href="" /> 
+			<link href="style/common.css" rel="stylesheet">
+			<link href="style/index.css" rel="stylesheet">
+			
+			
+		</head>
+		<body spellcheck="false">
+			<% include header %>
+			<section>
+				
+				
+				
+				
+				<table class="matrix">
+					<tr>
+					<th >
+					</th>
+				<%
+					for(var n=1; n<=16; n++){
+				%>
+					<th class="hLabel" name="inputs">
+						<div contenteditable='true' class="label" name="<%=n%>" id="labelI<%=n%>"></div>
+					</th>
+				<%	
+					}
+				%>
+					</tr>
+				<%
+					for(var n=1; n<=16; n++){
+				%>
+					<tr id="mtO<%=n%>" name="<%=n%>">
+						<th class="vLocked"> 
+							<div>
+								
+							</div>
+						</th>
+						
+				<%	
+						for(var m=1; m<=16; m++){
+				%>
+						<td name="<%=m%>" id="mtxO<%=n%>I<%=m%>" class="mtxBtn">
+						</td>
+					
+						
+				<%
+						}
+				%>
+						<th class="vLabel label" name="outputs"> 
+							<div contenteditable='true' class="label" name="<%=n%>" id="labelO<%=n%>"></div>
+						</th>
+					</tr>
+				<%
+					}
+				%>
+				</table>
+			
+			
+				
+			
+				
+			</section>
+			
+		</body>
+		
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/js/socketConnect.js"></script>
+		<script src="js/socket.js"></script>
+	
+		
+		
+	</html>

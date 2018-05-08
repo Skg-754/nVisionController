@@ -1,0 +1,44 @@
+
+
+
+<!DOCTYPE html>
+	<html>	
+		<head>
+			<meta charset="utf-8"/>
+			<meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width" />
+			<title>nVisionController</title>	
+			<link rel="shortcut icon" type="image/x-icon" href="" /> 
+			<link href="style/common.css" rel="stylesheet">
+			<link href="style/login.css" rel="stylesheet">
+			
+			
+		</head>
+		<body>
+		
+		<section class="vAlign">
+			<form class="login" id="loginForm">
+				<div class="right"></div><img class="logo" src="ressources/pictures/logo_veo.png"/>
+				<div class="input user">
+					<label for="user" class="right">User</label><input class="left" id="user" type="text"/>
+				</div>
+				<div class="input password">
+					<label for="password" class="right">Password</label><input class="left" id="password" type="password"/>
+				</div>
+
+				<div class="input submit">
+					<div class="right"></div><input type="submit" value="submit" onclick="return false" class="left" id="submit"/>
+				</div>
+				<div class="input">
+					<div id="loginMsg" class="left"></div>
+				</div>
+			</form>
+		</section>	
+	
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/js/socketConnect.js"></script>
+		<script src="js/style.js"></script>
+		<script src="js/login.js"></script>
+		
+	
+		</body>
+	</html>

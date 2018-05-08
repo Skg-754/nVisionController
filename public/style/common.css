@@ -1,0 +1,127 @@
+body{
+	background-color : rgb(20,20,20);
+	color : rgb(210,210,210);
+	font-family : Comfortaa;
+	padding : 0px;
+}
+/* polices */
+
+@font-face { 	
+	font-family: "Comfortaa"; 	
+	src: url('../ressources/comfortaa/Comfortaa-Regular.ttf');
+}
+
+/**
+	Styles génériques
+**/
+
+ul{
+	padding : 0px;
+	margin : 0px;
+}
+li {
+	display : block;
+}
+
+button{
+	height : 75px;
+	width : 100px;
+	margin : 20px;
+}
+
+input {
+	
+}
+
+
+a{
+		text-decoration : none;
+}
+
+
+.btn{
+	cursor : pointer;
+	background-color : rgb(30,30,30);
+	color : rgb(210,210,210);
+	transition: background-color 0.2s, color 1s;
+	padding : 10px;
+}
+.btn:hover{
+	background-color : rgb(150,50,50);
+
+}
+
+/**
+	Style du header
+**/
+header{
+	background-color : rgb(180,180,180);
+	margin : 0px;
+	padding : 0px;
+	position : absolute;
+	top : 0px;
+	left : 0px;
+	right : 0px;
+	height : 70px;
+	color : rgb(30,30,30);
+}
+header h1{
+	font-size : 20px;
+	font-weight : normal;
+	margin : 0px;
+	padding : 5px;
+	background-color : rgb(210,210,210);
+}
+header #settings{
+	margin-top : 0px;
+	position : absolute;
+	right : 0px;
+	margin : 10px;
+	
+}
+header div{
+	display : inline-block;
+	margin : 10px;
+}
+
+header .right{
+	
+	position : absolute;
+	right : 0px;
+	top: 0px;
+}
+
+
+
+header .right div {
+	cursor : pointer;
+	background-color : rgb(30,30,30);
+	color : rgb(210,210,210);
+	transition: background-color 0.2s, color 1s;
+	padding : 10px;
+}
+
+header .right div:hover {
+	background-color : rgb(150,50,50);
+
+}
+
+section{
+	position : absolute;
+	top : 70px;
+	left : 0px;
+	right : 0px;
+	
+}
+
+@media only screen and (max-width :500px){
+	
+	header .right{
+		margin-top : 25px;
+	}
+}
+
+input {
+	border-radius : 0px;
+}
+

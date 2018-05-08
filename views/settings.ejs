@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+	<html>	
+		<head>
+			<meta charset="utf-8"/>
+			<meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width" />
+			<title>nVisionController</title>	
+			<link rel="shortcut icon" type="image/x-icon" href="" /> 
+			<link href="style/common.css" rel="stylesheet">
+			<link href="style/settings.css" rel="stylesheet">
+			
+			
+		</head>
+		<body spellcheck="false">
+		
+		<% include header %>
+			
+		<section>
+			<div id="log">
+			
+			</div>
+		
+			<ul class="mtxSettings settingsCt">
+				<h2>
+					Matrix Settings
+				</h2>
+				<form>
+					<%
+						var settings = new Array(
+							new Array("IP ADRESS","mtxIpAddr"),
+							new Array("UDP PORT","mtxUdpPort"),
+							new Array("STATUS LOOP TIMEOUT","mtxStatusLoopTimeout"));
+						var settingsNb = settings.length;
+						
+						for(var n=0; n<settingsNb; n++){
+					%>
+							<li>
+								<label for="<%=settings[n][1]%>">
+									<%=settings[n][0]%> :
+								</label>
+								<input id="<%=settings[n][1]%>" class="getVal" type="text"></input>
+							</li>
+					<%
+						}
+					%>
+				</form>
+				<div	id="applyMtxSettings" class="btn">
+					Apply
+				</div>
+			</ul>
+			
+		
+			
+			<ul class="panelsSettings createPanel settingsCt">
+				
+			
+				<h2>
+					Add Panel
+				</h2>
+				<form id="panelForm">
+					<%
+						var settings = new Array(
+							new Array("PANEL NAME","panelName"));
+						var settingsNb = settings.length;
+						
+						for(var n=0; n<settingsNb; n++){
+					%>
+							<li>
+								<label for="<%=settings[n][1]%>">
+									<%=settings[n][0]%> :
+								</label>
+								<input id="<%=settings[n][1]%>" type="text"></input>
+							</li>
+					<%
+						}
+					%>
+					<ul class="inputs">
+								<h3>
+								Inputs
+								</h3>
+								<li>
+								<%
+									for (var n=1;n<=8;n++){
+								%>
+									<div>
+										<label><%=n%></label> <input type="checkbox" name="in" value="<%=n%>"> 
+									</div>
+								<%
+									}
+								%>
+								</li>
+								<li>
+								<%
+									for (var n=9;n<=16;n++){
+								%>
+									<div>
+										<label><%=n%></label> <input type="checkbox" name="in" value="<%=n%>"> 
+									</div>
+								<%
+									}
+								%>
+								</li>
+							</ul>
+							<ul class="outputs">
+								<h3>
+									Outputs
+								</h3>
+								<li>
+								<%
+									for (var n=1;n<=8;n++){
+								%>
+									<div>
+										<label><%=n%></label> <input type="checkbox" name="out" value="<%=n%>"> 
+									</div>
+								<%
+									}
+								%>
+								</li>
+																<li>
+								<%
+									for (var n=9;n<=16;n++){
+								%>
+									<div>
+										<label><%=n%></label> <input type="checkbox" name="out" value="<%=n%>"> 
+									</div>
+								<%
+									}
+								%>
+								</li>
+							</ul>
+				</form>
+				<div	id="createPanel" class="btn">
+					Create Panel
+				</div>
+				
+				<h2>
+					Panels Managment
+				</h2>
+				<table id ="panelsList">
+				<thead>
+					<tr>
+						<th>
+							Panel ID
+						</th>
+						<th>
+							Panel Name
+						</th>
+						<th>
+						</th>
+						<th>
+						</th>
+					</tr>
+					
+					</thead>
+					<tbody>
+					</tbody>
+					
+				</table>
+			</ul>
+			
+			
+			
+			<ul class="usersSettings settingsCt">
+				<h2>
+					Users Managment
+				</h2>
+				<table id ="usersList">
+				<thead>
+					<tr>
+						<th>
+							User Name
+						</th>
+						<th>
+							Password
+						</th>
+						<th>
+							User Type
+						</th>
+						<th>
+							Panel
+						</th>
+						<th>
+						
+						</th>
+						<th>
+						</th>
+					</tr>
+					<tr>
+					
+							<th>
+								<input type="text" name="userName"></input>
+							</th>
+							<th>
+								<input type="password" name="userName"/>
+							</th>
+							<th>
+								<select name="userType" id="userType">
+									<option value="admin">admin</option>
+									<option value="user">user</option>
+								</select>
+							</th>
+							<th>
+								<select name="userPanel" id="userPanel">
+									
+								</select>
+							</th>
+							<th>
+								<div class="btn" id="addUserBtn">
+								add
+								</div>
+							</th>
+							<th>
+							</th>
+					
+					</tr>
+					</thead>
+					<tbody>
+					</tbody>
+					
+				</table>
+			</ul>
+			
+			<div id="reloadSettings">
+				Reload Settings
+			</div>
+			
+			
+			
+			
+			
+		
+		</section>
+		</body>
+		
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/js/socketConnect.js"></script>;
+		<script src="/js/settings.js"></script>;
+		<script src="/js/logout.js"></script>;
+		
+		
+	</html>

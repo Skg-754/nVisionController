@@ -1,0 +1,44 @@
+﻿<header>
+	<h1>
+		Veo-Asso | nVisionController
+	</h1>
+	<%
+		var userType = type;
+		if(userType == "admin"){
+	%>
+		<div id="online">
+			STATUS :    
+		</div>
+		<div id="ipAddr">
+			MATRIX IP ADDRESS : <span contenteditable="true" span> 
+		</div>
+		<div id="clientNb">
+			CLIENTS CONNECTED :   <span></span>  
+		</div>	
+	<%
+		}
+	%>
+	
+	<div class="right"> 
+		<a  href='/'>
+			<div>
+				Home
+			</div>
+		</a>
+		<%
+		var userType = type;
+			if(userType == "admin"){
+		%>
+		<a  href='/settings'>
+			<div>
+				Settings
+			</div>
+		</a>
+		<%
+			}
+		%>
+		<div  id='logout'>
+			Logout
+		</div>
+	</div>
+</header>

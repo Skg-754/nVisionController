@@ -1,0 +1,28 @@
+﻿.panel{
+	margin : 20px;
+}
+.panel div{
+	display : inline-block;
+}
+.panel .panelBtn{
+	width : 60px;
+	height : 50px;
+	line-height : 50px;
+	display : inline-block;
+	text-align : center;
+	padding : 10px;
+	vertical-align : top;
+	margin : 5px;
+	cursor : pointer;
+}
+.panel .panelBtn div{
+	vertical-align : middle;
+	line-height : normal;
+}
+
+.panel .in{
+	background-color : rgb(40,100,0);
+}
+.panel .out{
+	background-color : rgb(189,0,0);
+}

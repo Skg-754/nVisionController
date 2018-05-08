@@ -1,0 +1,92 @@
+﻿.settingsCt{
+	display : inline-block;
+	border : 1px solid rgb(210,210,210);
+	margin : 10px;
+	padding : 10px;
+	font-size: 15px;
+	vertical-align : top;
+}
+.settingsCt h2{
+	margin : 0px;
+	padding-bottom : 10px;
+	margin-bottom : 20px;
+	border-bottom : 1px solid rgb(210,210,210);
+	font-size : 20px;
+}
+.settingsCt form{
+	margin-bottom : 20px;
+}
+.settingsCt li{
+	margin : 5px;
+}
+.mtxSettings input{
+	font-family : comfortaa;
+	width : 100px;s
+}
+.settingsCt label{
+	display : inline-block;
+	text-align : right;
+	width : 190px;
+	vertical-align : bottom;
+}
+ .btn{
+	background-color : rgb(210,210,210);
+	color : rgb(30,30,30);
+	text-align : center
+}
+ .btn:hover{
+	background-color : rgb(150,50,50);
+	color : rgb(210,210,210);
+}
+ .btn:active{
+	background-color : rgb(30,30,30);
+}
+
+table {
+	border-collapse : collapse;
+}
+table tr{
+	border-bottom : 1px solid rgb(210,210,210);
+}
+table tr:last-Child{
+	border : none;
+}
+table td{
+	border-right : 1px solid rgb(210,210,210);
+	padding : 10px;
+}
+table th{
+	padding-left : 10px;
+	padding-right : 10px;
+	
+}
+table thead th{
+	padding-bottom : 10px;
+}
+table thead input,select{
+		margin-top : 10px;
+}
+table td:last-Child{
+	border : none;
+}
+
+.createPanel li div{
+	display : inline-block;
+	
+}
+#createPanel{
+	margin-bottom : 20px;
+}
+.createPanel label{
+	width : 120px;
+}
+.createPanel li div label{
+	width : 10px;
+}
+#log{
+	opacity : 0;
+	height : 30px;
+	text-align : center;
+	margin-top : 10px;
+	transition : all 1s ease-in-out;
+}

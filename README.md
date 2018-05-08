@@ -1,7 +1,7 @@
 # nVisionController
 NodeJS controller for Miranda nVision Router
 
-Usage
+Usage :
 
 ```
 git clone https://github.com/Skg-754/nVisionController.git

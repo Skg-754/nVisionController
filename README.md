@@ -5,6 +5,7 @@ Usage
 
 ```
 git clone https://github.com/Skg-754/nVisionController.git
+cd nVisionController
 npm install
 npm start
 ```
